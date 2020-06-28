@@ -19,7 +19,7 @@ DEVICE_PATH := device/samsung/j5y17lte
 BOARD_USE_TFA_AMP := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexc,j5y17ltexx,j5y17ltelk
+TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
