@@ -30,4 +30,3 @@ PRODUCT_NAME := omni_j5y17lte
 PRODUCT_MODEL := Samsung Galaxy J5 2017
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-
