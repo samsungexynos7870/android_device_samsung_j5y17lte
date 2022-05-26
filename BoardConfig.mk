@@ -18,6 +18,9 @@ DEVICE_PATH := device/samsung/j5y17lte
 # Audio
 BOARD_USE_TFA_AMP := true
 
+# Display
+TARGET_SCREEN_DENSITY := 320
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc,j5y17lteub
 
@@ -31,12 +34,12 @@ BOARD_HAVE_SAMSUNG_BLUETOOTH := true
 # Kernel
 TARGET_KERNEL_CONFIG := exynos7870-j5y17lte_defconfig
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j5y17lte
 TARGET_RECOVERY_DEVICE_MODULES := libinit_j5y17lte
-
-# HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
@@ -44,6 +47,9 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
+
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
