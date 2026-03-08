@@ -15,8 +15,21 @@
 
 DEVICE_PATH := device/samsung/j5y17lte
 
-# Audio
-BOARD_USE_TFA_AMP := true
+# audio type guard
+TARGET_BOARD_HAS_TFA_SEC_AUDIO_HAL := false
+TARGET_BOARD_HAS_SEC_AUDIO_HAL := false
+
+ifeq ($(TARGET_BOARD_HAS_TFA_SEC_AUDIO_HAL),true)
+TARGET_BOARD_HAS_TFA_AMP := true
+endif
+
+# sec audio hal
+TARGET_BOARD_HAS_EXYNOS7870_SEC_AUDIOHAL := false
+
+TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
+
+# Audiohal
+BOARD_USE_SPKAMP := true
 
 # Display
 TARGET_SCREEN_DENSITY := 320
@@ -47,9 +60,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
-
-# ANT+
-BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
