@@ -1,0 +1,30 @@
+# J530FXXS9CUE5
+
+# Camera
+system/vendor/firmware/fimc_is_lib.bin:vendor/firmware/fimc_is_lib.bin
+system/vendor/firmware/setfile_3m3.bin:vendor/firmware/setfile_3m3.bin
+system/vendor/firmware/setfile_imx258.bin:vendor/firmware/setfile_imx258.bin
+-system/lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
+-system/lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
+
+# NFC - ese p3
+system/vendor/firmware/nfc/sec_s3nrn81_firmware.bin:vendor/firmware/nfc/sec_s3nrn81_firmware.bin
+system/vendor/etc/nfc/sec_s3nrn81_rfreg.bin:vendor/etc/nfc/sec_s3nrn81_rfreg.bin
+
+# Sensors
+system/vendor/lib/hw/sensors.universal7870.so:vendor/lib/hw/sensors.universal7870.so
+system/vendor/lib/libyasalgo.so:vendor/lib/libyasalgo.so
+system/vendor/etc/yas_set.cfg:vendor/etc/yas_set.cfg
+
+# Wifi
+system/vendor/etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
+system/vendor/etc/wifi/bcmdhd_apsta.bin_blob:vendor/etc/wifi/bcmdhd_apsta.bin_blob
+system/vendor/etc/wifi/bcmdhd_clm.blob:vendor/etc/wifi/bcmdhd_clm.blob
+system/vendor/etc/wifi/bcmdhd_mfg.bin:vendor/etc/wifi/bcmdhd_mfg.bin
+system/vendor/etc/wifi/bcmdhd_mfg.bin_blob:vendor/etc/wifi/bcmdhd_mfg.bin_blob
+system/vendor/etc/wifi/bcmdhd_sta.bin:vendor/etc/wifi/bcmdhd_sta.bin
+system/vendor/etc/wifi/bcmdhd_sta.bin_blob:vendor/etc/wifi/bcmdhd_sta.bin_blob
+system/vendor/etc/wifi/nvram.txt:vendor/etc/wifi/nvram.txt
+system/vendor/firmware/bcm43455.hcd:vendor/firmware/bcm43455.hcd
+system/vendor/etc/wifi/.clminfo:vendor/etc/wifi/.clminfo
+
