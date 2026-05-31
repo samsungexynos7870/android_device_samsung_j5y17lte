@@ -73,6 +73,9 @@ BOARD_CAMERA2_API_SUPPORT := true
 BOARD_CAMERA_SAMSUNG_TN_FEATURE := true
 BOARD_CAMERA_HAL3_FEATURE := true
 
+# RIL
+SIM_COUNT := 2
+
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
