@@ -40,6 +40,9 @@ TARGET_DEVICE_HAS_SAMSUNG_SLSI_EXYNOS7870 := false
 # TFA
 TARGET_DEVICE_TFA_MODEL := 9890
 
+# Camera
+TARGET_DEVICE_CAMERA_VER := P
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
