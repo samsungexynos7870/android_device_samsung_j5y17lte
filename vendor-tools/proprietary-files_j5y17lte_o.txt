@@ -1,0 +1,5 @@
+# J530FXXS5BSE3
+
+# Camera
+-system/lib/libexynoscamera.so:vendor/lib/libexynoscamera.so
+-system/lib/libexynoscamera3.so:vendor/lib/libexynoscamera3.so
