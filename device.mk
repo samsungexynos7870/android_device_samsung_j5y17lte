@@ -34,6 +34,12 @@ endif
 # is built for the same IC.
 TARGET_DEVICE_TFA_MODEL := 9890
 
+# Camera
+# The camera HAL is built from hardware/samsung_slsi-linaro/exynos7870; the
+# libraries and firmware are extracted from the Oreo (libs) and Pie (firmware)
+# releases, see vendor-tools/.
+TARGET_DEVICE_CAMERA_VER := O
+
 # gatekeeper type guard
 TARGET_DEVICE_HAS_HW_GATEKEEPER_BIOMETRICS := true
 TARGET_DEVICE_HAS_HW_GATEKEEPER_COMMON := false
