@@ -63,8 +63,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_j5y17lte
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 
 # CAMERA
-# Consumed by hardware/samsung_slsi-linaro/exynos7870 (libcamera3,
-# libcameraInterface) and by the camera provider in the common tree.
 BOARD_BACK_CAMERA_ROTATION := 90
 BOARD_FRONT_CAMERA_ROTATION := 270
 BOARD_BACK_CAMERA_SENSOR := SENSOR_NAME_IMX258

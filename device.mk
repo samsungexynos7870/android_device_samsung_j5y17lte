@@ -29,15 +29,9 @@ TARGET_DEVICE_HAS_TFA_AMP := true
 endif
 
 # TFA
-# The common vendor tree installs the container file for this model as
-# /vendor/etc/Tfa$(TARGET_DEVICE_TFA_MODEL).cnt and the common amplifier HAL
-# is built for the same IC.
 TARGET_DEVICE_TFA_MODEL := 9890
 
 # Camera
-# The camera HAL is built from hardware/samsung_slsi-linaro/exynos7870; the
-# libraries and firmware are extracted from the Oreo (libs) and Pie (firmware)
-# releases, see vendor-tools/.
 TARGET_DEVICE_CAMERA_VER := O
 
 # radio type guard
@@ -59,8 +53,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml
 
 # Custom mixer_paths
-# The OSS audio HAL ships a single, self contained mixer file, the prebuilt
-# Samsung HAL needs the split paths/gains pair.
 ifeq ($(TARGET_DEVICE_HAS_OSS_AUDIO_HAL),true)
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/mixer_paths_oss_j530.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml

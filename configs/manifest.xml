@@ -73,6 +73,16 @@
         <fqname>@1.4::IDrmFactory/clearkey</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.samsung.hardware.security.widevine.keyprovisioning</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISehWidevineKeyProvisioning</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISehWidevineKeyProvisioning/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
