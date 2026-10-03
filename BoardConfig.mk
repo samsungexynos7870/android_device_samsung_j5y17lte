@@ -15,6 +15,8 @@
 
 DEVICE_PATH := device/samsung/j5y17lte
 
+# Audio
+
 # audio type guard
 TARGET_BOARD_HAS_TFA_SEC_AUDIO_HAL := false
 TARGET_BOARD_HAS_SEC_AUDIO_HAL := false
@@ -30,6 +32,9 @@ TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
 
 # Audiohal
 BOARD_USE_SPKAMP := true
+
+# TFA
+TARGET_BOARD_TFA_MODEL := 9890
 
 # Display
 TARGET_SCREEN_DENSITY := 320
