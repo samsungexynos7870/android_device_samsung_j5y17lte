@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
+    audio.bluetooth.default \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
@@ -140,6 +141,10 @@ PRODUCT_PACKAGES += \
 #supplicant
 PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.3
+
+# power
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
