@@ -30,6 +30,9 @@ TARGET_BOARD_HAS_EXYNOS7870_SEC_AUDIOHAL := false
 
 TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
 
+# secril
+TARGET_SECRIL_VARIANT := samsung-exynos7870
+
 # Audiohal
 BOARD_USE_SPKAMP := true
 
@@ -87,6 +90,9 @@ SIM_COUNT := 2
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
+
+# Sepolicy
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
