@@ -34,6 +34,6 @@ on boot
     chown wifi root /sys/module/dhd/parameters/firmware_path
 
 on property:vold.decrypt=trigger_restart_framework
-exec /vendor/bin/hw/macloader
+exec /vendor/bin/macloader
 
 

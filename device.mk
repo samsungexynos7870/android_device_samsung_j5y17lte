@@ -130,18 +130,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-#hostpad
-PRODUCT_PACKAGES += \
-    android.hardware.wifi.hostapd@1.0
-
-#wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.4
-
-#supplicant
-PRODUCT_PACKAGES += \
-    android.hardware.wifi.supplicant@1.3
-
 # power
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
