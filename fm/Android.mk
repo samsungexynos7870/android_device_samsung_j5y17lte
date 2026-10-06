@@ -24,15 +24,16 @@ LOCAL_SRC_FILES := \
     FmRadioController_brcm.cpp \
     libfm_jni.cpp
 
-LOCAL_C_INCLUDES := \
-    $(LOCAL_PATH) \
-    $(JNI_H_INCLUDE)
+LOCAL_C_INCLUDES := $(LOCAL_PATH)
+
+LOCAL_HEADER_LIBRARIES := jni_headers
 
 LOCAL_SHARED_LIBRARIES := \
     libcutils \
     liblog
 
 LOCAL_CFLAGS += -Wall -Werror -Wno-unused-parameter
+
 
 LOCAL_MODULE := libfmjni
 LOCAL_MODULE_TAGS := optional
