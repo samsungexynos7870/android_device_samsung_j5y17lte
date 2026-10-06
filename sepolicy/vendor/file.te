@@ -1,0 +1,3 @@
+# Broadcom FM LNA enable (bcm43xx CONFIG_FM_LNA, sysfs lna_en).
+# mlstrustedobject: FMRadio is a platform-signed app (MCS categories).
+type sysfs_fm_lna, sysfs_type, fs_type, mlstrustedobject;

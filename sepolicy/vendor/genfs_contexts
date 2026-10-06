@@ -1,0 +1,5 @@
+# bcm43xx FM LNA. The platform device name follows the DT node;
+# libfmjni also walks /sys/devices/platform/*/lna_en.
+genfscon sysfs /devices/platform/bluetooth/lna_en          u:object_r:sysfs_fm_lna:s0
+genfscon sysfs /devices/platform/bcm43xx_bluetooth/lna_en  u:object_r:sysfs_fm_lna:s0
+genfscon sysfs /devices/bluetooth.0/lna_en                 u:object_r:sysfs_fm_lna:s0

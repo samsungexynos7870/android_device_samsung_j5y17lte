@@ -1,0 +1,3 @@
+# bcm43xx FM LNA (restorecon; genfscon is the runtime label for sysfs)
+/sys/devices/platform/[^/]+/lna_en    u:object_r:sysfs_fm_lna:s0
+/sys/devices/bluetooth\.[0-9]+/lna_en u:object_r:sysfs_fm_lna:s0

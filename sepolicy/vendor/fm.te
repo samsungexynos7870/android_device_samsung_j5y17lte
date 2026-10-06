@@ -1,0 +1,10 @@
+# FMRadio (packages/apps/FMRadio) is privileged and platform-signed.
+# libfmjni runs in that process and writes bcm43xx lna_en.
+#
+# Do not allow raw HCI here: SOCK_RAW needs CAP_NET_RAW, and
+# neverallow { appdomain -bluetooth -network_stack } self:capability_class_set *;
+# The kernel also has # CONFIG_BT_HCIUART is not set (Fluoride owns the UART).
+
+allow platform_app sysfs_fm_lna:file rw_file_perms;
+allow priv_app sysfs_fm_lna:file rw_file_perms;
+allow system_app sysfs_fm_lna:file rw_file_perms;

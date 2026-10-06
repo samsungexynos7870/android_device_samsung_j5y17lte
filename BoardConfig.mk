@@ -98,6 +98,7 @@ TARGET_LD_SHIM_LIBS += \
 
 # Sepolicy
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd
