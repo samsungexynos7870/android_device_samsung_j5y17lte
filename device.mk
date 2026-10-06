@@ -84,6 +84,12 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     libbt-vendor
 
+# FM Radio (Broadcom BCM43455 + RDS). libfmjni is built from $(DEVICE_PATH)/fm
+# when BOARD_HAVE_BCM_FM is set.
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/bluetooth/bt_vendor.conf:vendor/etc/bluetooth/bt_vendor.conf
 

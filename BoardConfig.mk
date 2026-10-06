@@ -48,6 +48,11 @@ TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc,j5y17lteub
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_CUSTOM_BT_CONFIG := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
+
+# FM Radio
+BOARD_HAVE_BCM_FM := true
+# TODO: This is dummy. Allow us to build fm radio via the flag above.
+BOARD_HAVE_SLSI_FM := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_SAMSUNG_BLUETOOTH := true
