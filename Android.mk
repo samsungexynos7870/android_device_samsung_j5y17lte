@@ -20,6 +20,4 @@ ifeq ($(TARGET_DEVICE),j5y17lte)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-include $(CLEAR_VARS)
-
 endif

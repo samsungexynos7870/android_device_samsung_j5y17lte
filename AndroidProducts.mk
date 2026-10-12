@@ -1,5 +1,6 @@
 #
 # Copyright 2017 The Android Open Source Project
+# Copyright (C) 2026 samsungexynos7870
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +15,8 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j5y17lte/
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/twrp_j5y17lte.mk
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_j5y17lte.mk
+COMMON_LUNCH_CHOICES := \
+    twrp_j5y17lte-eng
