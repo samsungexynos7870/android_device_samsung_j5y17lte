@@ -20,7 +20,7 @@ $ cat > .repo/local_manifests/j5y17lte.xml <<'EOF'
     <remote fetch="https://github.com/samsungexynos7870" name="exynos7870-labs" />
 
     <project name="android_device_samsung_j5y17lte" path="device/samsung/j5y17lte"
-             remote="exynos7870-labs" revision="twrp" />
+             remote="exynos7870-labs" revision="twrp-12.1" />
     <project name="android_kernel_samsung_exynos7870" path="kernel/samsung/exynos7870"
              remote="exynos7870-labs" revision="twrp-12.1" />
 </manifest>
