@@ -1,4 +1,4 @@
-<manifest version="1.0" type="device" target-level="3">
+<manifest version="1.0" type="device" target-level="5">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
@@ -14,6 +14,15 @@
         <version>7.0</version>
         <interface>
             <name>IEffectsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.soundtrigger</name>
+        <transport>hwbinder</transport>
+        <version>2.2</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -61,16 +70,9 @@
             <name>ICryptoFactory</name>
             <instance>default</instance>
         </interface>
-        <interface>
-            <name>IDrmFactory</name>
-            <instance>default</instance>
-        </interface>
         <fqname>@1.0::ICryptoFactory/default</fqname>
-        <fqname>@1.0::IDrmFactory/default</fqname>
         <fqname>@1.2::ICryptoFactory/widevine</fqname>
         <fqname>@1.2::IDrmFactory/widevine</fqname>
-        <fqname>@1.4::ICryptoFactory/clearkey</fqname>
-        <fqname>@1.4::IDrmFactory/clearkey</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.samsung.hardware.security.widevine.keyprovisioning</name>
@@ -160,16 +162,6 @@
             <name>INfc</name>
             <instance>default</instance>
         </interface>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.nfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>ISehNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::ISehNfc/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio</name>
