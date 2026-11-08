@@ -38,27 +38,7 @@ source "${HELPER}"
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/libexynoscamera.so)
-            # Fix libexynoscamera.so
-            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera_metadata_helper.so" "${2}"
-            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
-            "${PATCHELF}" --add-needed "libexynoscamera_shim.so" "${2}"
-        ;;
-        
-        vendor/lib/libexynoscamera3.so)
-            # Fix libexynoscamera3.so
-            "${PATCHELF}" --replace-needed "libcamera_client.so" "libcamera_metadata_helper.so" "${2}"
-            "${PATCHELF}" --replace-needed "libgui.so" "libgui_vendor.so" "${2}"
-            "${PATCHELF}" --add-needed "libexynoscamera_shim.so" "${2}"
-        ;;
-        
-        
-        vendor/lib/libbauthserver.so)
-            # Add shim for libbauthserver.so
-            "${PATCHELF}" --add-needed "libbauthtzcommon_shim.so" "${2}"
-        ;;
-
-        vendor/lib64/libbauthserver.so)
+        vendor/lib/libbauthserver.so | vendor/lib64/libbauthserver.so)
             # Add shim for libbauthserver.so
             "${PATCHELF}" --add-needed "libbauthtzcommon_shim.so" "${2}"
         ;;
