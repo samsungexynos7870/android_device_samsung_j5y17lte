@@ -105,7 +105,7 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
 
 # Sepolicy
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS := $(DEVICE_PATH)/sepolicy
 
 # Wifi
 BOARD_WLAN_DEVICE                := bcmdhd

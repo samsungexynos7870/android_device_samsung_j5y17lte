@@ -1,0 +1,6 @@
+# Shimmed vendor library libbauthserver (LD_SHIM_LIBS target, linker probes it in every domain)
+/vendor/lib(64)?/libbauthserver\.so                     u:object_r:vendor_public_lib_file:s0
+
+# Source-built NFC HAL (hardware/samsung/nfc) - the label the common tree
+# only gives to the samsung binary NFC service
+/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc@1\.2-service\.samsung            u:object_r:hal_nfc_default_exec:s0

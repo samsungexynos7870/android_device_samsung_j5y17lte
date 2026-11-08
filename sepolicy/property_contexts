@@ -1,0 +1,2 @@
+# Bluetooth factory data (bdaddr path) - set by init at boot
+ro.bt.bdaddr_path                  u:object_r:vendor_bluetooth_prop:s0
