@@ -93,7 +93,7 @@ PRODUCT_COPY_FILES += \
 
 # Display Device Config
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/display/576nits_config/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
+    $(DEVICE_PATH)/configs/display/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
 
 # NFC
 PRODUCT_COPY_FILES += \
