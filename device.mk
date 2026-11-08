@@ -43,6 +43,10 @@ TARGET_DEVICE_HAS_SEC_GNSS := true
 # prebuilt slsi
 TARGET_DEVICE_HAS_SAMSUNG_SLSI_EXYNOS7870 := false
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/broadcom/libbt
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml \
@@ -79,6 +83,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.j5y17lte
 
 # Bluetooth
+$(call soong_config_set,brcm_libbt,bdroid_buildcfg_include_dir,$(DEVICE_PATH)/bluetooth)
+$(call soong_config_set,brcm_libbt,custom_bt_config,//$(DEVICE_PATH):vnd_j5y17lte.txt)
+
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0.vendor \
