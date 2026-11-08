@@ -42,6 +42,11 @@ TARGET_BOARD_TFA_MODEL := 9890
 # Display
 TARGET_SCREEN_DENSITY := 320
 
+# build fixes
+BUILD_BROKEN_CLANG_PROPERTY := true
+BUILD_BROKEN_CLANG_CFLAGS := true
+BUILD_BROKEN_CLANG_ASFLAGS := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc,j5y17lteub
 
@@ -57,6 +62,9 @@ TARGET_KERNEL_CONFIG := exynos7870-j5y17lte_defconfig
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+
+# misc
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j5y17lte
@@ -86,6 +94,12 @@ BOARD_CAMERA_HAL3_FEATURE := true
 
 # RIL
 SIM_COUNT := 2
+
+# A/B
+AB_OTA_UPDATER := false
+
+## USB
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,13600000.dwc3)
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
