@@ -73,15 +73,12 @@ void property_override_quad(const std::string& boot_prop, const std::string& pro
 
 void init_dsds() {
     SetProperty("ro.vendor.multisim.set_audio_params", "true");
-    SetProperty("ro.vendor.multisim.simslotcount", "2");
+    property_override_dual("ro.multisim.simslotcount", "ro.vendor.multisim.simslotcount", "2");
     SetProperty("persist.radio.multisim.config", "dsds");
 }
 
 void vendor_load_properties()
 {
-    // Init a dummy BT MAC address, will be overwritten later
-    SetProperty("ro.boot.btmacaddr", "00:00:00:00:00:00");
-
     std::string bootloader = GetProperty("ro.bootloader","");
 
     if (bootloader.find("J530FX") == 0) {
@@ -115,10 +112,11 @@ void vendor_load_properties()
 
 
     /* Common properties*/
-    property_override("ro.build.description", "samsung/j5y17ltexx/j5y17lte:9/PPR1.180610.011/J530FXXU6CSK9:user/release-keys");
+    property_override("ro.build.description", "j5y17ltexx-user 9 PPR1.180610.011 J530FXXS8CUE4 release-keys");
     property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "j5y17lte");
 
     std::string device = GetProperty("ro.product.device", "");
-    LOG(ERROR) << "Found bootloader id %s setting build properties for %s device\n" << bootloader.c_str() << device.c_str();
+    LOG(ERROR) << "Found bootloader id " << bootloader << " setting build properties for "
+               << device << " device";
 }
 
