@@ -2,22 +2,34 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bt.bdaddr_path=/efs/bluetooth/bt_addr \
+    bluetooth.device.class_of_device=90,1,16 \
+    bluetooth.profile.asha.central.enabled=true \
+    bluetooth.profile.a2dp.source.enabled=true \
+    bluetooth.profile.avrcp.target.enabled=true \
+    bluetooth.profile.bas.client.enabled=true \
+    bluetooth.profile.gatt.enabled=true \
+    bluetooth.profile.hfp.ag.enabled=true \
+    bluetooth.profile.hid.device.enabled=true \
+    bluetooth.profile.hid.host.enabled=true \
+    bluetooth.profile.map.server.enabled=true \
+    bluetooth.profile.opp.enabled=true \
+    bluetooth.profile.pan.nap.enabled=true \
+    bluetooth.profile.pan.panu.enabled=true \
+    bluetooth.profile.pbap.server.enabled=true \
+    bluetooth.profile.sap.server.enabled=true \
+    bluetooth.le.disable_apcf_extended_features=1
+
 # Fix for echo in calls
 PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.disable_two_mic=false
-    
-# SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-    
-# Lockscreen rotation
-PRODUCT_PROPERTY_OVERRIDES += \
-    lockscreen.rot_override=true
 
-# FIFO UI scheduling
+# Choreographer
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.use_fifo_ui=1
+    persist.log.tag.Choreographer=E
 
-# Set fdsan to the warn_once severity level
+# Dual SIM
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.fdsan=warn_once
+    ro.vendor.multisim.simslotcount=2

@@ -31,10 +31,19 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 PRODUCT_DEVICE := j5y17lte
 PRODUCT_NAME := lineage_j5y17lte
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Galaxy J5 2017
+PRODUCT_MODEL := SM-J530F
 PRODUCT_MANUFACTURER := samsung
 
-WITH_GAPPS := false
+BUILD_FINGERPRINT := "samsung/j5y17ltexx/j5y17lte:9/PPR1.180610.011/J530FXXS8CUE4:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DeviceProduct=j5y17ltexx \
+    BuildDesc="j5y17ltexx-user 9 PPR1.180610.011 J530FXXS8CUE4 release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.PDA=J530FXXS8CUE4 \
+    ro.build.fingerprint=samsung/j5y17ltexx/j5y17lte:9/PPR1.180610.011/J530FXXS8CUE4:user/release-keys
+
 TARGET_SUPPORTS_BLUR := false
 TARGET_FACE_UNLOCK_SUPPORTED := false
 

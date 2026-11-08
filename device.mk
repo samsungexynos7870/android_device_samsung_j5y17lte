@@ -62,6 +62,9 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
 endif
 
+# Launch Android API level
+PRODUCT_SHIPPING_API_LEVEL := 24
+
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
@@ -80,6 +83,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth@1.0-service \
+    android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     libbt-vendor
@@ -101,7 +105,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnfc-nci \
     libnfc_nci_jni \
-    NfcNci \
     Tag \
     com.android.nfc_extras \
     android.hardware.nfc@1.2.vendor \
