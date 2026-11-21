@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi-service-legacy \
+    android.hardware.wifi-service \
     hostapd \
     libwifi-hal \
     libwpa_client \
