@@ -1,0 +1,24 @@
+cc_binary {
+    name: "fmd",
+
+    srcs: [
+        "fmd.c",
+        "fm_proto.c",
+        "fm_uart.c",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    init_rc: ["fmd.rc"],
+
+    vendor: true,
+}
+
+filegroup {
+    name: "libfmjni-brcm-srcs",
+
+    srcs: ["fmr_brcm.cpp"],
+}

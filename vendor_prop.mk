@@ -22,6 +22,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     bluetooth.profile.sap.server.enabled=true \
     bluetooth.le.disable_apcf_extended_features=1
 
+# FM Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fm.chip=0x4356 \
+    ro.fm.band=1 \
+    ro.fm.low_band=875 \
+    ro.fm.high_band=1080 \
+    ro.fm.seek_space=1 \
+    ro.fm.max_scan_num=30 \
+    ro.fm.seek_lev=4 \
+    ro.fm.scan_sort=1
+
 # Fix for echo in calls
 PRODUCT_PROPERTY_OVERRIDES += \
     audio_hal.disable_two_mic=false

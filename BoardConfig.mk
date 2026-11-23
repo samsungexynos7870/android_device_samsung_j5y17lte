@@ -53,6 +53,13 @@ TARGET_OTA_ASSERT_DEVICE := j5y17lte,j5y17ltexx,j5y17ltextc,j5y17lteub
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
+# FM Radio
+TARGET_BOARD_HAS_BRCM_FM := true
+
+SOONG_CONFIG_NAMESPACES += libfmjni
+SOONG_CONFIG_libfmjni += vendor
+SOONG_CONFIG_libfmjni_vendor := brcm
+
 # Kernel
 TARGET_KERNEL_CONFIG := exynos7870-j5y17lte_defconfig
 

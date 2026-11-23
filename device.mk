@@ -148,6 +148,14 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
+# FM radio
+# The LineageOS FM radio application is driven by the libfmjni Broadcom
+# backend; fmd owns the combo chip UART while the tuner is in use.
+PRODUCT_PACKAGES += \
+    FMRadio \
+    fmd \
+    libfmjni
+
 # Properties
 -include $(DEVICE_PATH)/vendor_prop.mk
 
