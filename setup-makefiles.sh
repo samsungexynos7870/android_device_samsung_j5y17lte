@@ -35,6 +35,22 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+# These libraries are built by Android.mk (the legacy exynos7870 MobiCore
+# client and the libbauthserver shim), so Soong cannot use them as prebuilt
+# shared library dependencies. Drop them from the generated shared_libs lists;
+# the blobs still get their runtime dependencies through the normal install.
+function lib_to_package_fixup() {
+    case "$1" in
+        libMcClient | libbauthtzcommon_shim)
+            return 0
+            ;;
+        *)
+            lib_to_package_fixup_clang_rt_ubsan_standalone "$1" ||
+                lib_to_package_fixup_proto_3_9_1 "$1"
+            ;;
+    esac
+}
+
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 

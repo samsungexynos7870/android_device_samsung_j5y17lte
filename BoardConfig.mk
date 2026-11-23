@@ -131,3 +131,7 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # inherit from the proprietary version
 -include vendor/samsung/j5y17lte/BoardConfigVendor.mk
+
+# Samsung's fingerprint/bauth vendor blobs fail the strict prebuilt ELF checks
+# (missing DT_NEEDED entries and unresolved libgcc helpers); skip that validation.
+BUILD_BROKEN_PREBUILT_ELF_FILES := true
