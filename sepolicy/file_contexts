@@ -11,3 +11,6 @@
 
 # FM LNA enable switch
 /sys/devices/bluetooth/lna_en                            u:object_r:sysfs_bluetooth_writable:s0
+
+# Local touch AIDL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch-service\.j5y17lte u:object_r:hal_lineage_touch_default_exec:s0
